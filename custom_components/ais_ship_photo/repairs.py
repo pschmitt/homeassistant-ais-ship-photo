@@ -41,8 +41,8 @@ class AisShipPhotoRepairFlow(RepairsFlow):
         if entry is None:
             return self.async_abort(reason="entry_not_found")
 
-        if user_input is not None:
-            errors: dict[str, str] = {}
+        errors: dict[str, str] = {}
+        if user_input is not None and CONF_SEARXNG_URL in user_input:
             if not _valid_url(user_input[CONF_SEARXNG_URL]):
                 errors["base"] = "invalid_url"
             elif self.hass.states.get(user_input[CONF_VESSEL_ENTITY]) is None:
@@ -53,8 +53,6 @@ class AisShipPhotoRepairFlow(RepairsFlow):
                 )
                 await self.hass.config_entries.async_reload(entry.entry_id)
                 return self.async_create_entry(data={})
-        else:
-            errors = {}
 
         current = {**entry.data, **entry.options}
         data_schema = vol.Schema(
