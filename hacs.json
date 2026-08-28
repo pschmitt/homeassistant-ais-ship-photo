@@ -1,5 +1,8 @@
 {
   "name": "AIS Ship Photo",
+  "domains": [
+    "camera"
+  ],
   "render_readme": true,
   "homeassistant": "2026.8.0"
 }

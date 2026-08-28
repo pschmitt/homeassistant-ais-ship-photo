@@ -4,7 +4,12 @@
   "codeowners": ["@pschmitt"],
   "config_flow": true,
   "documentation": "https://github.com/pschmitt/homeassistant-ais-ship-photo",
+  "integration_type": "service",
   "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/pschmitt/homeassistant-ais-ship-photo/issues",
+  "loggers": [
+    "custom_components.ais_ship_photo"
+  ],
   "requirements": [],
   "version": "1.0.0"
 }
