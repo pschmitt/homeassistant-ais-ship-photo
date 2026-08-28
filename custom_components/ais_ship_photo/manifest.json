@@ -1,0 +1,10 @@
+{
+  "domain": "ais_ship_photo",
+  "name": "AIS Ship Photo",
+  "codeowners": ["@pschmitt"],
+  "config_flow": true,
+  "documentation": "https://github.com/pschmitt/homeassistant-ais-ship-photo",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "1.0.0"
+}
