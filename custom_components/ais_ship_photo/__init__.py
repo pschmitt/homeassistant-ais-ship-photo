@@ -23,11 +23,12 @@ async def async_setup(hass: HomeAssistant, config: dict[str, Any]) -> bool:
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up AIS Ship Photo from a config entry."""
+    settings = {**entry.data, **entry.options}
     coordinator = ShipPhotoCoordinator(
         hass,
         async_get_clientsession(hass),
-        entry.data[CONF_SEARXNG_URL],
-        entry.data[CONF_VESSEL_ENTITY],
+        settings[CONF_SEARXNG_URL],
+        settings[CONF_VESSEL_ENTITY],
     )
     hass.data[DOMAIN][entry.entry_id] = coordinator
 

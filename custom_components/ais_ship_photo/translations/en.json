@@ -13,5 +13,20 @@
         }
       }
     }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "AIS ship photo settings",
+        "description": "Choose the SearXNG instance and Home Assistant sensor used for vessel lookups.",
+        "data": {
+          "searxng_url": "SearXNG URL",
+          "vessel_entity": "AIS vessel entity"
+        },
+        "error": {
+          "invalid_url": "Enter a valid HTTP or HTTPS URL."
+        }
+      }
+    }
   }
 }
