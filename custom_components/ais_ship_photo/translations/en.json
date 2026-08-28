@@ -28,5 +28,51 @@
         }
       }
     }
+  },
+  "issues": {
+    "vessel_entity_missing": {
+      "title": "The configured AIS vessel entity is missing",
+      "fix_flow": {
+        "step": {
+          "init": {
+            "title": "Fix AIS ship photo settings",
+            "description": "Select an existing vessel sensor and verify the SearXNG URL.",
+            "data": {
+              "searxng_url": "SearXNG URL",
+              "vessel_entity": "AIS vessel entity"
+            },
+            "error": {
+              "invalid_url": "Enter a valid HTTP or HTTPS URL.",
+              "entity_not_found": "Select an existing Home Assistant sensor."
+            }
+          }
+        },
+        "abort": {
+          "entry_not_found": "The AIS ship photo config entry no longer exists."
+        }
+      }
+    },
+    "invalid_searxng_url": {
+      "title": "The SearXNG URL is invalid",
+      "fix_flow": {
+        "step": {
+          "init": {
+            "title": "Fix AIS ship photo settings",
+            "description": "Enter a valid SearXNG URL and select an existing vessel sensor.",
+            "data": {
+              "searxng_url": "SearXNG URL",
+              "vessel_entity": "AIS vessel entity"
+            },
+            "error": {
+              "invalid_url": "Enter a valid HTTP or HTTPS URL.",
+              "entity_not_found": "Select an existing Home Assistant sensor."
+            }
+          }
+        },
+        "abort": {
+          "entry_not_found": "The AIS ship photo config entry no longer exists."
+        }
+      }
+    }
   }
 }
