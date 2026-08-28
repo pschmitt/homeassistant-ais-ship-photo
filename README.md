@@ -7,3 +7,5 @@ instance and retrieves the result through SearXNG's signed image proxy.
 MarineTraffic results are preferred; VesselFinder is used as a fallback. The
 camera caches the image and exposes the vessel name, MMSI, provider, proxy URL,
 and lookup errors as entity attributes.
+
+Licensed under the GNU General Public License version 3.0 or later.

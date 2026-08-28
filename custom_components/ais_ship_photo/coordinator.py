@@ -164,6 +164,7 @@ class ShipPhotoCoordinator:
                     provider = "VesselFinder"
                 if proxy_path is None:
                     self._set_error("No MarineTraffic or VesselFinder photo found")
+                    _LOGGER.debug("No photo result found for %s (%s)", vessel_name, mmsi)
                     return
 
                 photo_url = urljoin(f"{self.searxng_url}/", proxy_path.group(0))
