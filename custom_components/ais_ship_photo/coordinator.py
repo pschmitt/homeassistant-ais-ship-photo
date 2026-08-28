@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import asyncio
-from collections.abc import Callable
-from datetime import UTC, datetime, timedelta
 import html
 import logging
 import re
+from collections.abc import Callable
+from datetime import UTC, datetime, timedelta
 from urllib.parse import urlencode, urljoin
 
 from aiohttp import ClientError, ClientSession
@@ -164,7 +164,9 @@ class ShipPhotoCoordinator:
                     provider = "VesselFinder"
                 if proxy_path is None:
                     self._set_error("No MarineTraffic or VesselFinder photo found")
-                    _LOGGER.debug("No photo result found for %s (%s)", vessel_name, mmsi)
+                    _LOGGER.debug(
+                        "No photo result found for %s (%s)", vessel_name, mmsi
+                    )
                     return
 
                 photo_url = urljoin(f"{self.searxng_url}/", proxy_path.group(0))
