@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from homeassistant.components.camera import CameraEntity
+from homeassistant.components.camera import Camera
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 
@@ -20,7 +20,7 @@ async def async_setup_entry(
     async_add_entities([ShipPhotoCamera(coordinator)])
 
 
-class ShipPhotoCamera(CameraEntity):
+class ShipPhotoCamera(Camera):
     """Camera showing the latest AIS vessel photo."""
 
     _attr_icon = "mdi:ferry"
@@ -53,5 +53,5 @@ class ShipPhotoCamera(CameraEntity):
         """Return the cached vessel photo."""
         if self.coordinator.needs_refresh:
             await self.coordinator.async_refresh()
-        self._attr_content_type = self.coordinator.content_type
+        self.content_type = self.coordinator.content_type
         return self.coordinator.image
