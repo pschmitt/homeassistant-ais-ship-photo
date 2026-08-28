@@ -34,6 +34,13 @@ class AisShipPhotoRepairFlow(RepairsFlow):
     async def async_step_init(
         self, user_input: dict[str, Any] | None = None
     ) -> RepairsFlowResult:
+        """Start the repair flow."""
+        del user_input
+        return await self.async_step_configure()
+
+    async def async_step_configure(
+        self, user_input: dict[str, Any] | None = None
+    ) -> RepairsFlowResult:
         """Handle the repair form."""
         entry: ConfigEntry | None = self.hass.config_entries.async_get_entry(
             self.entry_id
@@ -64,7 +71,7 @@ class AisShipPhotoRepairFlow(RepairsFlow):
             }
         )
         return self.async_show_form(
-            step_id="init",
+            step_id="configure",
             data_schema=self.add_suggested_values_to_schema(data_schema, current),
             errors=errors,
         )

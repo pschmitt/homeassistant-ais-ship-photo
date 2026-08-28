@@ -34,7 +34,7 @@
       "title": "The configured AIS vessel entity is missing",
       "fix_flow": {
         "step": {
-          "init": {
+          "configure": {
             "title": "Fix AIS ship photo settings",
             "description": "Select an existing vessel sensor and verify the SearXNG URL.",
             "data": {
@@ -56,7 +56,7 @@
       "title": "The SearXNG URL is invalid",
       "fix_flow": {
         "step": {
-          "init": {
+          "configure": {
             "title": "Fix AIS ship photo settings",
             "description": "Enter a valid SearXNG URL and select an existing vessel sensor.",
             "data": {
