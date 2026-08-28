@@ -7,6 +7,9 @@
         "data": {
           "searxng_url": "SearXNG URL",
           "vessel_entity": "AIS vessel entity"
+        },
+        "error": {
+          "invalid_url": "Enter a valid HTTP or HTTPS URL."
         }
       }
     }
