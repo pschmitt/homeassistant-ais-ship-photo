@@ -1,0 +1,19 @@
+name: Home Assistant
+
+on:
+  push:
+    paths:
+      - 'custom_components/**'
+      - '.github/workflows/home-assistant.yaml'
+  pull_request:
+    paths:
+      - 'custom_components/**'
+      - '.github/workflows/home-assistant.yaml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hassfest:
+    uses: pschmitt/ci-workflows/.github/workflows/home-assistant-hassfest.yaml@main
