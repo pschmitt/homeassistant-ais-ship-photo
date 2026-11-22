@@ -7,11 +7,11 @@
         "data": {
           "searxng_url": "SearXNG URL",
           "vessel_entity": "AIS vessel entity"
-        },
-        "error": {
-          "invalid_url": "Enter a valid HTTP or HTTPS URL."
         }
       }
+    },
+    "error": {
+      "invalid_url": "Enter a valid HTTP or HTTPS URL."
     }
   },
   "options": {
@@ -22,11 +22,11 @@
         "data": {
           "searxng_url": "SearXNG URL",
           "vessel_entity": "AIS vessel entity"
-        },
-        "error": {
-          "invalid_url": "Enter a valid HTTP or HTTPS URL."
         }
       }
+    },
+    "error": {
+      "invalid_url": "Enter a valid HTTP or HTTPS URL."
     }
   },
   "issues": {
@@ -40,15 +40,15 @@
             "data": {
               "searxng_url": "SearXNG URL",
               "vessel_entity": "AIS vessel entity"
-            },
-            "error": {
-              "invalid_url": "Enter a valid HTTP or HTTPS URL.",
-              "entity_not_found": "Select an existing Home Assistant sensor."
             }
           }
         },
         "abort": {
           "entry_not_found": "The AIS ship photo config entry no longer exists."
+        },
+        "error": {
+          "invalid_url": "Enter a valid HTTP or HTTPS URL.",
+          "entity_not_found": "Select an existing Home Assistant sensor."
         }
       }
     },
@@ -62,15 +62,15 @@
             "data": {
               "searxng_url": "SearXNG URL",
               "vessel_entity": "AIS vessel entity"
-            },
-            "error": {
-              "invalid_url": "Enter a valid HTTP or HTTPS URL.",
-              "entity_not_found": "Select an existing Home Assistant sensor."
             }
           }
         },
         "abort": {
           "entry_not_found": "The AIS ship photo config entry no longer exists."
+        },
+        "error": {
+          "invalid_url": "Enter a valid HTTP or HTTPS URL.",
+          "entity_not_found": "Select an existing Home Assistant sensor."
         }
       }
     }
